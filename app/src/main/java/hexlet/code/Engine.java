@@ -1,13 +1,15 @@
 package hexlet.code;
 
+import hexlet.code.games.Cli;
+
 import java.util.Scanner;
 
 public class Engine {
-    public static final int ROUNDS = 3; // Общее количество раундов для всех игр
+    public static final int ROUNDS = 3;
 
     public static void runGame(String greeting, String[][] questionsAndAnswers) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(greeting);  // Выводим приветствие для игры
+        System.out.println(greeting);
 
         if (questionsAndAnswers.length == 0 || questionsAndAnswers.length != ROUNDS) {
             System.err.println("Error: Invalid questionsAndAnswers data.");
@@ -15,7 +17,7 @@ public class Engine {
             return;
         }
 
-        String userName = Cli.getUserName(); // Получаем имя пользователя
+        String userName = Cli.getUserName();
 
         for (String[] questionAndAnswer : questionsAndAnswers) {
             String question = questionAndAnswer[0];
@@ -29,7 +31,7 @@ public class Engine {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
                         + correctAnswer + "'.\nLet's try again, " + userName + "!");
                 scanner.close();
-                return; // Прерываем игру при ошибке
+                return;
             }
             System.out.println("Correct!");
         }
