@@ -17,7 +17,7 @@ public class App {
         if (userChoose == 1) {
             Cli.getUserName();
         } else if (userChoose == 2) {
-            Even.isEven();
+            Even.playEvenGame();
         } else if (userChoose == 3) {
             Calc.playCalcGame();
         } else if (userChoose == 4) {
