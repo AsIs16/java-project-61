@@ -4,12 +4,14 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
+import static hexlet.code.Engine.ROUNDS;
+
 public class Calc {
     private static final int MAX_NUMBER = 50;
 
     public static String getRandomOperator() {
         Random random = new Random();
-        int ranNum = random.nextInt(3);
+        int ranNum = random.nextInt(ROUNDS);
         return switch (ranNum) {
             case 0 -> "+";
             case 1 -> "-";
@@ -29,11 +31,11 @@ public class Calc {
 
     public static void playCalcGame() {
         String greeting = "What is the result of the expression?";
-        String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
+        String[][] questionsAndAnswers = new String[ROUNDS][2];
 
         Random random = new Random();
 
-        for (int i = 0; i < Engine.ROUNDS; i++) {
+        for (int i = 0; i < ROUNDS; i++) {
             int randNum1 = random.nextInt(MAX_NUMBER) + 1;
             int randNum2 = random.nextInt(MAX_NUMBER) + 1;
 

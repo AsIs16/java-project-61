@@ -12,13 +12,17 @@ import java.util.Scanner;
 import static hexlet.code.Engine.ROUNDS;
 
 public class App {
+    private static final int four = 4;
+    private static final int five = 5;
+    private static final int six = 6;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");
-        System.out.println("Please enter the game number and press Enter." +
-                "\n1 - Greet\n2 - Even\n3 - Calc\n4 - GCD" +
-                "\n5 - Progression\n6 - Prime\n0 - Exit");
+        System.out.println("Please enter the game number and press Enter."
+                + "\n1 - Greet\n2 - Even\n3 - Calc\n4 - GCD"
+                + "\n5 - Progression\n6 - Prime\n0 - Exit");
         System.out.print("Your choice: ");
         int userChoose = sc.nextInt();
         sc.nextLine();
@@ -29,11 +33,11 @@ public class App {
             Even.playEvenGame();
         } else if (userChoose == ROUNDS) {
             Calc.playCalcGame();
-        } else if (userChoose == 4) {
+        } else if (userChoose == four) {
             GCD.playGcdGame();
-        } else if (userChoose == 5) {
+        } else if (userChoose == five) {
             Progression.playProgressionGame();
-        } else if (userChoose == 6) {
+        } else if (userChoose == six) {
             Prime.playPrimeGame();
         } else {
             System.out.println("Exiting game.");
