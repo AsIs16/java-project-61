@@ -5,6 +5,8 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class GCD {
+    private static final int MAX_NUMBER = 100;
+
     public static int getGCD(int a, int b) {
         if (b == 0) {
             return a;
@@ -19,8 +21,8 @@ public class GCD {
         Random random = new Random();
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int num1 = random.nextInt(100) + 1;
-            int num2 = random.nextInt(100) + 1;
+            int num1 = random.nextInt(MAX_NUMBER) + 1;
+            int num2 = random.nextInt(MAX_NUMBER) + 1;
 
             String question = num1 + " " + num2;
             int correctAnswer = getGCD(num1, num2);

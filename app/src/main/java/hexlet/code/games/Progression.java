@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
+import static hexlet.code.Engine.ROUNDS;
+
 public class Progression {
     private static final int MIN_PROGRESSION_LENGTH = 5;
     private static final int MAX_PROGRESSION_LENGTH = 10;
@@ -27,10 +29,10 @@ public class Progression {
 
     public static void playProgressionGame() {
         String greetingProgression = "What number is missing in the progression?";
-        String[][] questionsAndAnswersProgression = new String[3][2];
+        String[][] questionsAndAnswersProgression = new String[ROUNDS][2];
         Random random = new Random();
 
-        for (int i = 0; i < Engine.ROUNDS; i++) {
+        for (int i = 0; i < ROUNDS; i++) {
             int start = getRandomNumber(MIN_START_VALUE, MAX_START_VALUE);
             int difference = getRandomNumber(MIN_DIFFERENCE, MAX_DIFFERENCE);
             int length = getRandomNumber(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
