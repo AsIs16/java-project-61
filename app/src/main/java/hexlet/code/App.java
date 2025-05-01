@@ -12,9 +12,9 @@ import java.util.Scanner;
 import static hexlet.code.Engine.ROUNDS;
 
 public class App {
-    private static final int four = 4;
-    private static final int five = 5;
-    private static final int six = 6;
+    private static final int FOUR = 4;
+    private static final int FIVE = 5;
+    private static final int SIX = 6;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -33,11 +33,11 @@ public class App {
             Even.playEvenGame();
         } else if (userChoose == ROUNDS) {
             Calc.playCalcGame();
-        } else if (userChoose == four) {
+        } else if (userChoose == FOUR) {
             GCD.playGcdGame();
-        } else if (userChoose == five) {
+        } else if (userChoose == FIVE) {
             Progression.playProgressionGame();
-        } else if (userChoose == six) {
+        } else if (userChoose == SIX) {
             Prime.playPrimeGame();
         } else {
             System.out.println("Exiting game.");
