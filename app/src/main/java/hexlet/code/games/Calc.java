@@ -38,7 +38,7 @@ public class Calc {
             int randNum2 = random.nextInt(MAX_NUMBER) + 1;
 
             String operator = getRandomOperator();
-            String question = "Question: " + randNum1 + " " + operator + " " + randNum2;
+            String question = randNum1 + " " + operator + " " + randNum2;
             int correctAnswer = calculate(randNum1, randNum2, operator);
 
             questionsAndAnswers[i][0] = question;
